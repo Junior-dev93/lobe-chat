@@ -15,7 +15,9 @@ module.exports = defineConfig({
     entry: ['./README.md'],
     outputLocales: ['zh_CN'],
     outputExtensions: (locale) => {
-      if (locale === 'en_US') return '.md';
+      if (locale === 'en_US') {
+        return '.md';
+      }
       return `.${locale.replace('_', '-')}.md`;
     },
   },
